@@ -37,11 +37,12 @@ Follow these steps to run the Dezit application using Docker:
    Update the `.env` file with the required configuration values. Below is an example of the `.env` file:
 
    ```properties
-   DB_DATABASE="mydb" # CHANGE DATABASE NAME IF REQUIRED
-   DB_PASSWORD="" # ADD PASSWORD HERE
+   DB_DATABASE="mydb"
+   DB_PASSWORD=""
    ```
 
    Replace `DB_PASSWORD` with your database password and update other values as necessary.
+   Change `SERVER_PORT` if required.
 
 3. **Build Docker Images**  
    Build the Docker images for both the client and server:
@@ -61,6 +62,7 @@ Follow these steps to run the Dezit application using Docker:
 
    - The client login page will be accessible at `http://localhost:5005/<route>`.
    - To access the login page at default port, enter `localhost:5005` on your browser.
+   - Uploaded files will be stored in the `./uploads` directory by default.
 
 6. **Stop the Application**  
    To stop the application, press `Ctrl+C` in the terminal where `docker-compose up` is running, or use:
